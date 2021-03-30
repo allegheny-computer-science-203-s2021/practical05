@@ -59,7 +59,7 @@ A summary of the tasks to be completed in this practical is below.
 1. Study the given program in the pipeline style, observe programming choices used in this style.
 2. Using the command given in the [Using Pyenv and Pipenv](#using-pyenv-and-pipenv) section below, run linting and reformatting tools. Fix the program based on the errors produced.
 3. Make sure the program produces desired output similar to what is shown in the [Output](#output) section below. Fix any errors that occur when running the program.
-4. Run testing and study its results. Add more test cases (minimum total of five), using parameterized testing (at least twice) when possible, to achieve high coverage.
+4. Run testing and study its results. Add more test cases (minimum total of five), using [parameterized testing](https://docs.pytest.org/en/stable/example/parametrize.html) (at least twice) when possible, to achieve high coverage.
 5. Set up [Codecov](https://app.codecov.io) for your practical 5 repository. First sign up for the [GitHub Developer Student Pack](https://education.github.com/pack) to be automatically enrolled to use Codecov for free. Then, sign in to [Codecov](https://app.codecov.io) with your GitHub account and add your practical 5 repository. Next, update `codecov.yml` file with your token.
 6. Complete the `reflection.md` document.
 7. Ensure that all GatorGrader checks and GitHub actions pass.
