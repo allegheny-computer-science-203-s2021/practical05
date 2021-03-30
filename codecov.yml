@@ -1,0 +1,22 @@
+codecov:
+  token: 0882edcc-3692-42e3-95a5-25575655c4c7
+  max_report_age: off
+
+comment: false
+
+coverage:
+  precision: 2
+  round: down
+  status:
+    project:
+      default:
+       threshold: 0.2
+       if_not_found: success
+    patch:
+      default:
+        enabled: no
+        if_not_found: success
+    changes:
+      default:
+        enabled: no
+        if_not_found: success
