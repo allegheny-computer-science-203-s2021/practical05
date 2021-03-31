@@ -179,36 +179,24 @@ time  -  203
 good  -  201
 ```
 
-Running the test suite with `pytest` should produce output similar to this but with more test cases:
+Running the test suite and coverage should initially produce output similar to this but with more test cases (you will attempt to improve it during the practical):
 
 ```
 plugins: clarity-0.3.0a0, sugar-0.9.4, cov-2.11.1
-collecting ...
- tests/test_compute_tf_cookbook.py ✓✓✓                                                                100% ██████████
-
-Results (0.04s):
-       3 passed
-```
-
-Running the coverage should initially produce output similar to this but with more test cases (you will attempt to improve it during the practical):
-
-```
-plugins: clarity-0.3.0a0, sugar-0.9.4, cov-2.11.1
-collecting ...
- tests/test_compute_tf_cookbook.py ✓✓✓                                                                100% ██████████
+collecting ... 
+ tests/test_compute_tf_pipeline.py ✓✓✓✓✓✓                                                                 100% ██████████
 
 ---------- coverage: platform darwin, python 3.8.3-final-0 -----------
-Name                                   Stmts   Miss Branch BrPart  Cover   Missing
-----------------------------------------------------------------------------------
-termfrequency/__init__.py                  0      0      0      0   100%
-termfrequency/compute_tf_cookbook.py      42     17     22      1    50%   31-35, 78-83, 92, 96-103
-----------------------------------------------------------------------------------
-TOTAL                                     42     17     22      1    50%
-Coverage XML written to file coverage.xml
+Name                                   Stmts   Miss  Cover
+----------------------------------------------------------
+termfrequency/__init__.py                  0      0   100%
+termfrequency/compute_tf_pipeline.py      40     24    40%
+----------------------------------------------------------
+TOTAL                                     40     24    40%
 
 
-Results (0.09s):
-       3 passed
+Results (0.08s):
+       6 passed
 ```
 
 ## Automated Checks with GatorGrader
@@ -228,43 +216,47 @@ Updated!
 Managing GatorGrader's Python dependencies...
 Finished!
 
-✔  The compute_tf_cookbook.py in termfrequency has at least 9 of the 'word_freqs' fragment
-✔  The file conftest.py exists in the tests directory
-✔  The compute_tf_cookbook.py in termfrequency has at least 1 of the 'as data_file' fragment
-✔  The test_compute_tf_cookbook.py in tests has at least 3 multiple-line Python comment(s)
-✔  The compute_tf_cookbook.py in termfrequency has exactly 1 of the 'import string' fragment
-✔  The __init__.py in tests has exactly 0 of the 'TODO' fragment
-✔  The reflection.md in writing has at least 400 word(s) in total
-✔  The repository has at least 1 commit(s)
-✔  The reflection.md in writing has exactly 0 of the 'TODO' fragment
-✔  The test_compute_tf_cookbook.py in tests has at least 0 single-line Python comment(s)
-✔  The compute_tf_cookbook.py in termfrequency has at least 7 multiple-line Python comment(s)
-✔  The test_compute_tf_cookbook.py in tests has at least 3 of the 'test_' fragment
-✔  The file compute_tf_cookbook.py exists in the termfrequency directory
-✔  The reflection.md in writing has exactly 8 of the 'heading' tag
-✔  The file __init__.py exists in the tests directory
-✔  The compute_tf_cookbook.py in termfrequency has at least 14 single-line Python comment(s)
-✔  The test_compute_tf_cookbook.py in tests has exactly 0 of the 'TODO' fragment
-✔  The compute_tf_cookbook.py in termfrequency has at least 1 of the 'data = []' fragment
-✔  The compute_tf_cookbook.py in termfrequency has at least 3 of the 'global words' fragment
-✔  The compute_tf_cookbook.py in termfrequency has at least 1 of the 'words = []' fragment
-✔  The compute_tf_cookbook.py in termfrequency has at least 1 of the 'word_freqs = []' fragment
-✔  The reflection.md in writing has exactly 2 of the 'code_block' tag
-✔  The compute_tf_cookbook.py in termfrequency has exactly 0 of the 'TODO' fragment
+
+
+✔  The reflection.md in writing has exactly 1 of the 'code_block' tag
+✔  The file test_compute_tf_pipeline.py exists in the tests directory
 ✔  The reflection.md in writing has exactly 0 of the 'Add Your Name Here' fragment
-✔  The compute_tf_cookbook.py in termfrequency has at least 3 of the 'global data' fragment
-✔  The compute_tf_cookbook.py in termfrequency has at least 1 of the 'with open' fragment
-✔  The conftest.py in tests has exactly 0 of the 'TODO' fragment
+✔  The repository has at least 1 commit(s)
+✔  The test_compute_tf_pipeline.py in tests has at least 5 of the 'assert' fragment
+✔  The test_compute_tf_pipeline.py in tests has at least 5 of the 'test_' fragment
+✔  The test_compute_tf_pipeline.py in tests has at least 2 of the '@pytest.mark.parametrize' fragment
+✔  The reflection.md in writing has at least 1 of the '![' fragment
+✔  The lint.sh in scripts has exactly 0 of the 'TODO' fragment
 ✔  The file reflection.md exists in the writing directory
-✔  The file test_compute_tf_cookbook.py exists in the tests directory
+✔  The test.sh in scripts has exactly 0 of the 'TODO' fragment
+✔  The file compute_tf_pipeline.py exists in the termfrequency directory
+✔  The conftest.py in tests has exactly 0 of the 'TODO' fragment
+✔  The reflection.md in writing has at least 400 word(s) in total
+✔  The test_compute_tf_pipeline.py in tests has at least 5 multiple-line Python comment(s)
+✔  The file lint.sh exists in the scripts directory
+✔  The test_compute_tf_pipeline.py in tests has exactly 0 of the 'TODO' fragment
+✔  The cover.sh in scripts has exactly 0 of the 'TODO' fragment
+✔  The __init__.py in tests has exactly 0 of the 'TODO' fragment
+✔  The compute_tf_pipeline.py in termfrequency has at least 6 single-line Python comment(s)
+✔  The compute_tf_pipeline.py in termfrequency has at least 1 of the 'for w in word_list' fragment
+✔  The compute_tf_pipeline.py in termfrequency has at least 1 of the 'with open' fragment
+✔  The file conftest.py exists in the tests directory
+✔  The reflection.md in writing has exactly 9 of the 'heading' tag
+✔  The file test.sh exists in the scripts directory
+✔  The compute_tf_pipeline.py in termfrequency has at least 7 multiple-line Python comment(s)
+✔  The file cover.sh exists in the scripts directory
+✔  The reflection.md in writing has exactly 0 of the 'TODO' fragment
+✔  The file __init__.py exists in the tests directory
+✔  The compute_tf_pipeline.py in termfrequency has exactly 0 of the 'TODO' fragment
+✔  The test_compute_tf_pipeline.py in tests has at least 0 single-line Python comment(s)
 
 
-    ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-    ┃ Passed 29/29 (100%) of checks for cmpsc-203-spring-2021-practical4! ┃
-    ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+	┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+	┃ Passed 31/31 (100%) of checks for cmpsc-203-spring-2021-practical5! ┃
+	┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 
-BUILD SUCCESSFUL in 16s
+BUILD SUCCESSFUL in 39s
 1 actionable task: 1 executed
 ```
 
@@ -273,7 +265,7 @@ BUILD SUCCESSFUL in 16s
 If the course instructor updates the provided material for this assignment and you would like to receive these updates, then you can type this command in the main directory for this assignment:
 
 ```
-git remote add download git@github.com:allegheny-computer-science-203-s2021/practical04.git
+git remote add download git@github.com:allegheny-computer-science-203-s2021/practical05.git
 ```
 
 You should only need to type this command once; typing the command additional times may yield an error message but will not negatively influence the state of your repository. Now, you are ready to download the updates provided by the course instructor by typing:
@@ -290,7 +282,7 @@ This assignment uses [GitHub Actions CI](https://github.com/features/actions) to
 
 ## Reporting Problems
 
-If you have found a problem with this assignment's provided source code, then you can go to the [Computer Science 203 Practical 4 Starter](https://github.com/allegheny-computer-science-203-s2021/practical04) repository and create an issue by clicking the "Issues" tab and then clicking the green "New Issue" button. If you have found a problem with the [GatorGrader tool](https://github.com/GatorEducator/gatorgrader) and the way that it checks you assignment, then you can follow the aforementioned steps to create an issue in its repository. To ensure that your issue is properly resolved, please provide as many details as is possible about the problem that you experienced.
+If you have found a problem with this assignment's provided source code, then you can go to the [Computer Science 203 Practical 4 Starter](https://github.com/allegheny-computer-science-203-s2021/practical05) repository and create an issue by clicking the "Issues" tab and then clicking the green "New Issue" button. If you have found a problem with the [GatorGrader tool](https://github.com/GatorEducator/gatorgrader) and the way that it checks you assignment, then you can follow the aforementioned steps to create an issue in its repository. To ensure that your issue is properly resolved, please provide as many details as is possible about the problem that you experienced.
 
 Students who find and use the appropriate GitHub issue tracker to correctly document a mistake in any aspect of this laboratory assignment will receive free GitHub stickers and extra credit towards their grade for it.
 
