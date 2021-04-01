@@ -23,14 +23,6 @@ jobs:
         pip install --upgrade pip
         pip install pipenv
         pip install coverage
-    - name: Check practical
-      run: |
-        gradle grade
-      continue-on-error: true
-      if: always()
-      env:
-       PIPENV_VENV_IN_PROJECT: 1
-       PIPENV_IGNORE_VIRTUALENVS: 1
     - name: Lint with flake8
       run: |
         pipenv install --dev
@@ -51,4 +43,12 @@ jobs:
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
       with:
-        token: ${{ secrets.CODECOV_TOKEN }}
+        token: ${{ secrets.CODECOV_TOKEN }}    
+    - name: Check practical
+      run: |
+        gradle grade
+      continue-on-error: true
+      if: always()
+      env:
+       PIPENV_VENV_IN_PROJECT: 1
+       PIPENV_IGNORE_VIRTUALENVS: 1
