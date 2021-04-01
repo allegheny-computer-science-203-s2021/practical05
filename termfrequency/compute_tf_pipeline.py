@@ -2,6 +2,7 @@
 # to the source code standard for the Python programming language
 
 #!/usr/bin/env python
+# pylint: disable=C0114 # missing-module-docstring
 import sys, re, operator, string
 
 #
